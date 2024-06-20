@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: p2divmw0s-python-gitops
+  description: This is GitOps manifest for p2divmw0s-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: p2divmw0s-python
+    janus-idp.io/tekton: p2divmw0s-python 
+    backstage.io/kubernetes-id: p2divmw0s-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:p2divmw0s-python
